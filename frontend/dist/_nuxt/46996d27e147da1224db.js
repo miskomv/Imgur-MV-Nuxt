@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{299:function(n,t,e){"use strict";e.r(t);var l=e(37),component=Object(l.a)({},function(){var n=this.$createElement;return(this._self._c||n)("h1",[this._v("H1 imgur")])},[],!1,null,null,null);t.default=component.exports}}]);
