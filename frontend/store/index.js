@@ -1,5 +1,5 @@
 export const state = () => ({
-	loading: false,
+
 	imageDetais: {
 		visible: false,
 		src: ''
@@ -14,14 +14,6 @@ export const state = () => ({
 });
 
 export const mutations = {
-
-	/* Loading */
-	loadingShow(state) {
-		state.loading = true;
-	},
-	loadingHide(state) {
-		state.loading = false;
-	},
 
 	/* Image Details */
 	detailsShow(state, {src}) {
@@ -41,14 +33,6 @@ export const mutations = {
 
 export const actions = {
 
-	/* Loading */
-	loadingShow(context) {
-		context.commit('loadingShow');
-	},
-	loadingHide(context) {
-		context.commit('loadingHide');
-	},
-
 	/* Image Details */
 	detailsShow(context, imageData) {
 		context.commit('detailsShow', imageData);
@@ -62,5 +46,4 @@ export const actions = {
 		context.commit('newImage', image);
 	}
 
-
-}
+};

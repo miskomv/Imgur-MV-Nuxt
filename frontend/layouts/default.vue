@@ -1,5 +1,5 @@
 <template>
-	<div class="default_template" v-loading="loading">
+	<div class="default_template">
 
 		<!-- Menu -->
 		<Menu></Menu>
@@ -18,10 +18,5 @@
 
 	export default {
 		components: {Menu, ImageDetails},
-		computed: {
-			loading() {
-				return this.$store.state.loading;
-			}
-		}
 	}
 </script>

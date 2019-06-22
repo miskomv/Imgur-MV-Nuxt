@@ -1,6 +1,6 @@
 <template>
 	<div class="new_file">
-		<div class="popup">
+		<div class="popup" v-loading="uploading_items > 0">
 
 			<a href="#" class="close" @click.prevent="uploadHide">X</a>
 
@@ -71,14 +71,11 @@
 			},
 			uploadFiles(files) {
 
-				this.$store.dispatch('loadingShow');
-
 				this.uploading = [];
-				this.uploading_items = 0;
+				this.uploading_items = files.length;
 				this.errors = false;
 
 				for (let i = 0; i < files.length; i++) {
-					this.uploading_items++;
 					this.uploadFile(files[i]);
 				}
 
@@ -93,11 +90,11 @@
 
 					this.$store.dispatch('newImage', img);
 
+
 					this.uploading_items--;
 
 					if (this.uploading_items === 0) {
 						this.uploadHide();
-						this.$store.dispatch('loadingHide');
 					}
 				};
 
