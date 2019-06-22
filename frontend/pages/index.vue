@@ -13,6 +13,16 @@
 
 	export default {
 		components: {ImageElement},
+		head: {
+			title: 'Imgur MV Nuxt',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'Imgur MV Nuxt'
+				}
+			]
+		},
 		computed: {
 			list() {
 				return this.$store.state.images;

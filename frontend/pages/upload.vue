@@ -23,6 +23,16 @@
 
 	export default {
 		components: {ImageElement, ImageUpload},
+		head: {
+			title: 'Upload images - Imgur MV Nuxt',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'Upload images - Imgur MV Nuxt'
+				}
+			]
+		},
 		computed: {
 			list() {
 				return this.$store.state.uploadedImages;

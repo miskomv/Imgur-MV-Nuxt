@@ -94,6 +94,7 @@
 					this.uploading_items--;
 
 					if (this.uploading_items === 0) {
+						this.$notify.success('Images uploaded correctly.');
 						this.uploadHide();
 					}
 				};
