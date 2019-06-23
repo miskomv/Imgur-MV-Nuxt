@@ -1,0 +1,23 @@
+service: imgur-laravel-serverless
+provider:
+    name: aws
+    runtime: provided
+    environment:
+        APP_STORAGE: '/tmp'
+
+package:
+    exclude:
+        - '.git/**'
+        - '.idea/**'
+        - 'node_modules/**'
+        - 'storage/**'
+
+functions:
+    website:
+        handler: public/index.php
+        timeout: 30
+        layers:
+            - 'arn:aws:lambda:eu-west-3:209497400698:layer:php-73-fpm:7'
+        events:
+            -   http: 'ANY /'
+            -   http: 'ANY {proxy+}'
