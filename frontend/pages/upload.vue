@@ -10,7 +10,6 @@
 		<div class="image hidden" v-for="i in 8"></div>
 
 		<!-- Image Upload Popup -->
-
 		<transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
 			<ImageUpload v-if="upload_visible" @onHide="uploadHide"></ImageUpload>
 		</transition>
